@@ -6,8 +6,8 @@
     <div class="row">
         <div class="col-md-6">
             <div *ngFor='let quote of quotes;let i = index'>
-                <div class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Author: {{quote.author}}</div>
+                <div id={{i}} class="card bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Author: {{quote.author}} <i class="fas fa-times"></i></div>
                     <div class="card-body">
                         <p class="card-text">{{quote.quoteInput}}</p>
                         <p>Publisher: {{quote.publisher}}</p>
@@ -19,9 +19,6 @@
                         <small class="text-muted">Last updated 3 mins ago</small>
                     </div>
                 </div>
-                <button>Upvote</button>
-                <button>Downvote</button>
-                <button>Delete</button>
             </div>
         </div>
 

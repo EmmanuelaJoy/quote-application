@@ -8,7 +8,14 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote('Everything will be okay in the end if it is not okay, it is not the end.', 'John Lennon', 'Emmanuela')
+    new Quote('Everything will be okay in the end if it is not okay, it is not the end.', 'John Lennon', 'Emmanuela'),
+    new Quote('I am no longer accepting the things i cannot change, i am changing the things i cannot accept.', 'Angela Davis', 'Emmanuela'),
+    new Quote('Do not live the same year 75 times and call it a life.', 'R Sharma', 'Emmanuela'),
+    new Quote('Suffer the pain of discipline or suffer the pain of regret.', 'John Lennon', 'Emmanuela'),
+    new Quote('Everything will be okay in the end if it is not okay, it is not the end.', 'John Lennon', 'Emmanuela'),
+    new Quote('Everything will be okay in the end if it is not okay, it is not the end.', 'John Lennon', 'Emmanuela'),
+    new Quote('Everything will be okay in the end if it is not okay, it is not the end.', 'John Lennon', 'Emmanuela'),
+    new Quote('There is a danger in letting people misname you. If you are a fire, do not answer when they call you a spark.', 'Upile Chisala', 'Emmanuela')
   ];
 
 
