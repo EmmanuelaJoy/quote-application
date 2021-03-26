@@ -4,24 +4,27 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-sm-12 col-md-4">
             <app-quote-form></app-quote-form>
         </div>
-        <div class="col-6">
-            <div *ngFor='let quote of quotes;let i = index'>
-                <div id={{i}} class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-header">Author: {{quote.author}} <i class="fas fa-times"></i></div>
-                    <div class="card-body">
-                        <p class="card-text">{{quote.quoteInput}}</p>
-                        <p>Publisher: {{quote.publisher}}</p>
-                        <i class="far fa-thumbs-up">Inspirational</i>
-                        <i class="far fa-thumbs-down">Terrible</i>
-                        <i class="far fa-trash-alt">Delete</i>
-                    </div>
-                    <div class="card-footer">
-                        <small class="text-muted">Last updated 3 mins ago</small>
+        <div class="col-sm-12 col-md-8">
+            <div class="row card-group">
+                <div class="col-sm-12 col-md-8 col-lg-6" *ngFor='let quote of quotes;let i = index'>
+                    <div id={{i}} class="card bg-light mb-3">
+                        <div class="card-header">Author: {{quote.author}} <i class="fas fa-times"></i></div>
+                        <div class="card-body">
+                            <p class="card-text">{{quote.quoteInput}}</p>
+                            <p>Publisher: {{quote.publisher}}</p>
+                            <i class="far fa-thumbs-up">Inspirational</i>
+                            <i class="far fa-thumbs-down">Terrible</i>
+                            <i class="far fa-trash-alt">Delete</i>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
