@@ -7,14 +7,14 @@ import { Quote } from './quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  quotes!: Quote[] = [
+    new Quote('Everything will be okay in the end if it is not okay, it is not the end.', 'John Lennon', 'Emmanuela')
+  ];
 
-  quotes!: Quote[] {
 
-}
+  constructor() { }
 
-constructor() { }
-
-ngOnInit(): void {
-}
+  ngOnInit(): void {
+  }
 
 }
