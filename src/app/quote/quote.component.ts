@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Quote } from './quote'
+import { Quote } from '../quote'
 
 @Component({
   selector: 'app-quote',
@@ -7,7 +7,7 @@ import { Quote } from './quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes!: Quote[] = [
+  quotes: Quote[] = [
     new Quote('Everything will be okay in the end if it is not okay, it is not the end.', 'John Lennon', 'Emmanuela')
   ];
 
