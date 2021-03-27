@@ -1,18 +1,30 @@
-<form>
+<form #quoteForm='ngForm'>
     <div class="form-group">
         <label for="quoteInput">Quote:</label>
-        <input type="text" class="form-control" id="quoteInput" required>
-        <small class="form-text text-muted">Credible quotes are appreciated.</small>
+        <input type="text" class="form-control" id="quoteInput" [(ngModel)]="newQuote.quoteInput" name="quoteInput"
+            #quoteInput="ngModel" required>
+        <div [hidden]="quoteInput.valid || quoteInput.pristine" class="alert alert-danger">
+            <p>Quote is required</p>
+        </div>
     </div>
 
     <div class="form-group">
         <label for="author">Author of the quote:</label>
-        <input type="text" class="form-control" id="author">
+        <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author"
+            #author="ngModel" required>
+        <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+            <p>Author's name is required</p>
+        </div>
     </div>
 
     <div class="form-group">
         <label for="publisher">Publisher:</label>
-        <input type="text" class="form-control" id="publisher">
+        <input type="text" class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher"
+            #publisher="ngModel" required>
+        <small class="form-text text-muted">Enter your name here.</small>
+        <div [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
+            <p>Publisher's name is required</p>
+        </div>
     </div>
 
 
