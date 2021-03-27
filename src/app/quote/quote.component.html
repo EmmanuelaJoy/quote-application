@@ -3,30 +3,39 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 <div class="container">
+    <div class="jumbotron">
+        <h3>Do you have a favorite quote?</h3>
+        <h4>It could be anything inspirational, educative, motivating or even fun!</h4>
+        <h5>Type it down below</h5>
+    </div>
     <div class="row">
-        <div class="col-sm-12 col-md-4">
+        <div class="col-12">
+            <h5>Add quote here:</h5>
+            <hr>
             <app-quote-form></app-quote-form>
         </div>
-        <div class="col-sm-12 col-md-8">
-            <div class="row card-group">
-                <div class="col-sm-12 col-md-8 col-lg-6" *ngFor='let quote of quotes;let i = index'>
-                    <div id={{i}} class="card bg-light mb-3">
-                        <div class="card-header">Author: {{quote.author}} <i class="fas fa-times"></i></div>
-                        <div class="card-body">
-                            <p class="card-text">{{quote.quoteInput}}</p>
-                            <p>Publisher: {{quote.publisher}}</p>
-                            <i class="far fa-thumbs-up">Inspirational</i>
-                            <i class="far fa-thumbs-down">Terrible</i>
-                            <i class="far fa-trash-alt">Delete</i>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
-                    </div>
-                </div>
+    </div>
 
+    <div class="row card-group">
+        <div class="col-sm-12 col-md-6 col-lg-6" *ngFor='let quote of quotes;let i = index'>
+            <div id={{i}} class="card bg-light mb-3">
+                <div class="card-header">Author: {{quote.author}} <i class="fas fa-times"></i></div>
+                <div class="card-body">
+                    <p class="card-text">{{quote.quoteInput}}</p>
+                    <p>Publisher: <app-quote-details [quote]='quote'></app-quote-details>
+                    </p>
+                    <i class="far fa-thumbs-up">Inspirational</i>
+                    <i class="far fa-thumbs-down">Terrible</i>
+                    <i class="far fa-trash-alt">Delete</i>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
             </div>
         </div>
 
     </div>
+
+
+
 </div>
