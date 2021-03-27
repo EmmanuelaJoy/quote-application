@@ -18,7 +18,15 @@ export class QuoteComponent implements OnInit {
     new Quote('There is a danger in letting people misname you. If you are a fire, do not answer when they call you a spark.', 'Upile Chisala', 'Emmanuela')
   ];
 
+  deleteQuote(isComplete, index) {
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`)
 
+      if (toDelete) {
+        this.quotes.splice(index, 1)
+      }
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
