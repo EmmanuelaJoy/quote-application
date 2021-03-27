@@ -1,0 +1,9 @@
+.jumbotron {
+  background-color: steelblue;
+  color: #fff;
+}
+
+.jumbotron h3 {
+  font-family: "Times New Roman";
+  font-size: 4rem;
+}
