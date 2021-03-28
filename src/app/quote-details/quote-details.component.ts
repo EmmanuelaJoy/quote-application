@@ -11,9 +11,27 @@ export class QuoteDetailsComponent implements OnInit {
   @Input() quote!: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
+  numberOfUpvotes: number = 0;
+  numberOfDownvotes: number = 0;
+
+  upvote() {
+    this.numberOfUpvotes += 1;
+    if (this.numberOfDownvotes > 0) {
+      this.numberOfDownvotes = 0;
+    }
+  }
+
+  downvote() {
+    this.numberOfDownvotes += 1;
+    if (this.numberOfUpvotes > 0) {
+      this.numberOfUpvotes = 0;
+    }
+  }
+
   deleteQuote(complete: boolean) {
     this.isComplete.emit(complete);
   }
+
 
   constructor() { }
 
