@@ -1,9 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Shippori+Mincho+B1:wght@600&display=swap");
+
 .jumbotron {
   background-color: steelblue;
   color: #fff;
 }
 
 .jumbotron h3 {
-  font-family: "Times New Roman";
-  font-size: 4rem;
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.jumbotron h4 {
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.jumbotron h5 {
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.card {
+  margin-bottom: 2em;
+}
+
+.card-header {
+}
+
+.card-text .fas {
+  font-size: 1.5rem;
+}
+
+.card-text {
+  font-family: "Shippori Mincho B1", serif;
+  font-size: 23px;
+  text-align: center;
+  padding: 1em;
+  max-width: 600px;
+  background: #fff;
 }

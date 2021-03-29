@@ -1,5 +1,10 @@
-<p>Publisher: {{quote.publisher}} </p>
+<p>-Published by {{quote.publisher}} </p>
 
-<i (click)='upvote()' class="fas fa-thumbs-up"></i>Upvote {{numberOfUpvotes}}
-<i (click)='downvote()' class="fas fa-thumbs-down"></i>Downvote {{numberOfDownvotes}}
-<i (click)='deleteQuote(true)' class="fas fa-trash-alt"></i>Delete
+<div id="down">
+    <span><i (click)='upvote()' class="fas fa-thumbs-up"></i>Upvote {{numberOfUpvotes}}</span>
+
+    <span><i (click)='downvote()' class="fas fa-thumbs-down"></i>Downvote {{numberOfDownvotes}}</span>
+</div>
+<div>
+    <i (click)='deleteQuote(true)' class="fas fa-trash-alt"></i>Delete
+</div>

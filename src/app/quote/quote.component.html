@@ -21,7 +21,8 @@
             <div id={{i}} class="card" appHighlight>
                 <div class="card-header">Author: {{quote.author}}</div>
                 <div class="card-body">
-                    <p class="card-text">{{quote.quoteInput}}</p>
+                    <blockquote class="card-text"><i class="fas fa-quote-left"></i> {{quote.quoteInput}} <i
+                            class="fas fa-quote-right"></i></blockquote>
                     <p>
                         <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
                     </p>
