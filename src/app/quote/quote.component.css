@@ -1,43 +1,71 @@
-@import url("https://fonts.googleapis.com/css2?family=Amita:wght@700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Shippori+Mincho+B1:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital@1&family=Shippori+Mincho+B1:wght@600&display=swap");
 
 .jumbotron {
   background-color: steelblue;
+  font-family: "Noto Serif", serif;
   color: #fff;
+  text-shadow: 0.1rem 0.1rem 0.3rem #333;
+  text-align: left;
 }
 
 .jumbotron h3 {
-  font-family: "Noto Serif", serif;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 3rem;
+  line-height: 1em;
+  letter-spacing: 0.1em;
 }
 
 .jumbotron h4 {
-  font-family: "Noto Serif", serif;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+  text-align: left;
 }
 
 .jumbotron h5 {
-  font-family: "Noto Serif", serif;
   font-weight: 400;
-  font-style: italic;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .card {
   margin-bottom: 2em;
+  background-color: #fff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  line-height: 30px;
+  padding: 5px 15px;
+}
+
+.card-header #author {
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+
+.card-header .fas {
+  cursor: pointer;
+  background: black;
+  border-radius: 50%;
+  padding: 0.2em;
+  color: white;
 }
 
 .card-text .fas {
   font-size: 1.5rem;
+  padding: 1.2em;
+  display: block;
+  color: gray;
 }
 
 .card-text {
   font-family: "Shippori Mincho B1", serif;
   font-size: 23px;
   text-align: center;
-  padding: 1em;
-  max-width: 600px;
-  background: #fff;
+}
+
+.card-footer {
+  font-size: 1rem;
 }

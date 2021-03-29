@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { $ } from 'protractor';
 import { Quote } from '../quote'
 
 @Component({
@@ -8,12 +9,13 @@ import { Quote } from '../quote'
 })
 export class QuoteFormComponent implements OnInit {
 
-  newQuote = new Quote(" ", " ", " ", new Date());
+  newQuote = new Quote(" ", " ", " ", new Date(), 0, 0);
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote() {
     this.addQuote.emit(this.newQuote);
   }
+
   constructor() { }
 
   ngOnInit(): void {

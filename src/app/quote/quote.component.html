@@ -6,7 +6,7 @@
     <div class="jumbotron">
         <h3>Do you have a favorite quote?</h3>
         <h4>It could be anything inspirational, educative, motivating or even fun!</h4>
-        <h5>Type it down below</h5>
+        <h5>Type it down below!</h5>
     </div>
     <div class="row">
         <div class="col-12">
@@ -18,13 +18,21 @@
 
     <div class="row card-group">
         <div class="col-sm-12 col-md-6 col-lg-6" *ngFor='let quote of quotes;let i = index'>
-            <div id={{i}} class="card" appHighlight>
-                <div class="card-header">Author: {{quote.author}}</div>
+            <div id={{i}} class="card">
+                <div class="card-header">
+                    <span id="author">Author: {{quote.author}}</span>
+                    <span><i (click)='deleteQuote(i)' class="fas fa-times"></i></span>
+                </div>
                 <div class="card-body">
-                    <blockquote class="card-text"><i class="fas fa-quote-left"></i> {{quote.quoteInput}} <i
-                            class="fas fa-quote-right"></i></blockquote>
+                    <blockquote class="card-text" appHighlight
+                        *ngIf="highestUpvote() === quote.upvotes && quote.upvotes > 0">
+                        <i class="fas fa-quote-left"></i> {{quote.quoteInput}} <i class="fas fa-quote-right"></i>
+                    </blockquote>
+                    <blockquote class="card-text" *ngIf="highestUpvote() !== quote.upvotes || quote.upvotes === 0">
+                        <i class="fas fa-quote-left"></i> {{quote.quoteInput}} <i class="fas fa-quote-right"></i>
+                    </blockquote>
                     <p>
-                        <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+                        <app-quote-details [quote]='quote'></app-quote-details>
                     </p>
                 </div>
                 <div class="card-footer">

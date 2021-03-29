@@ -5,3 +5,7 @@ form {
 #submitBtn:hover {
   background-color: blueviolet;
 }
+
+#resetBtn {
+  display: none;
+}

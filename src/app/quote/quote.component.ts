@@ -18,19 +18,34 @@ export class QuoteComponent implements OnInit {
     new Quote('There is a danger in letting people misname you. If you are a fire, do not answer when they call you a spark.', 'Upile Chisala', 'Emmanuela', new Date(2018, 4, 14))
   ];
 
-  deleteQuote(isComplete, index) {
-    if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`)
-
-      if (toDelete) {
-        this.quotes.splice(index, 1)
-      }
-    }
-  }
-
   addNewQuote(quote) {
     this.quotes.unshift(quote)
   }
+
+  deleteQuote(index) {
+    let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`)
+
+    if (toDelete) {
+      this.quotes.splice(index, 1)
+    }
+
+  }
+
+  preNum?: number
+  lastNum?: number
+  counter?: number
+
+  highestUpvote() {
+    this.preNum = 0
+    this.lastNum = 0
+
+    for (this.counter = 0; this.counter < this.quotes.length; this.counter++) {
+      this.lastNum = this.quotes[this.counter].upvotes;
+      if (this.lastNum > this.preNum) { this.preNum = this.lastNum }
+    }
+    return this.preNum
+  }
+
 
   constructor() { }
 
