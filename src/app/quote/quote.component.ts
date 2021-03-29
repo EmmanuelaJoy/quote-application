@@ -19,8 +19,13 @@ export class QuoteComponent implements OnInit {
   ];
 
   addNewQuote(quote) {
-    this.quotes.unshift(quote)
+    if (quote.quoteInput == " " || quote.author == " " || quote.publisher == " ") {
+      alert("Please fill in all the quote details first")
+    } else {
+      this.quotes.unshift(quote)
+    }
   }
+
 
   deleteQuote(index) {
     let toDelete = confirm(`Are you sure you want to delete this quote by ${this.quotes[index].author}?`)
@@ -31,19 +36,19 @@ export class QuoteComponent implements OnInit {
 
   }
 
-  preNum?: number
-  lastNum?: number
+  highestVote?: number
+  lowestVote?: number
   counter?: number
 
   highestUpvote() {
-    this.preNum = 0
-    this.lastNum = 0
+    this.highestVote = 0
+    this.lowestVote = 0
 
     for (this.counter = 0; this.counter < this.quotes.length; this.counter++) {
-      this.lastNum = this.quotes[this.counter].upvotes;
-      if (this.lastNum > this.preNum) { this.preNum = this.lastNum }
+      this.lowestVote = this.quotes[this.counter].upvotes;
+      if (this.lowestVote > this.highestVote) { this.highestVote = this.lowestVote }
     }
-    return this.preNum
+    return this.highestVote
   }
 
 

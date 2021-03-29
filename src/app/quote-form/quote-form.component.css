@@ -6,10 +6,20 @@ form {
   font-size: 22px;
 }
 
-#submitBtn:hover {
+button {
   background-color: steelblue;
 }
 
+#submitBtn:hover {
+  background-color: rgb(44, 155, 22);
+  border: none;
+}
+
 #resetBtn {
-  display: none;
+  margin-left: 4em;
+}
+
+#resetBtn:hover {
+  background-color: rgb(255, 94, 0);
+  border: none;
 }

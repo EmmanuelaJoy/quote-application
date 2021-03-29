@@ -1,4 +1,4 @@
-<form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+<form (ngSubmit)='submitQuote()' #quoteForm='ngForm' name="myForm">
     <div class="form-group">
         <label for="quoteInput">Quote:</label>
         <input type="text" class="form-control" id="quoteInput" [(ngModel)]="newQuote.quoteInput" name="quoteInput"
@@ -30,6 +30,6 @@
 
     <div>
         <button type="submit" class="btn btn-primary" id="submitBtn">Submit Quote</button>
-        <button type="reset" class="btn btn-primary" id="resetBtn">Reset Fields</button>
+        <button type="reset" (click)="clearForm(quoteForm)" class="btn btn-primary" id="resetBtn">Reset Fields</button>
     </div>
 </form>

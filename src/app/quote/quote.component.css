@@ -6,6 +6,9 @@
   color: #fff;
   text-shadow: 0.1rem 0.1rem 0.3rem #333;
   text-align: left;
+  background-image: url(../img/pen.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .jumbotron h3 {
@@ -27,6 +30,13 @@
   font-weight: 400;
   font-size: 1.3rem;
   margin-top: 1em;
+}
+
+.row h5 {
+  font-family: "Noto Serif", serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+  letter-spacing: 1pt;
 }
 
 .card {
