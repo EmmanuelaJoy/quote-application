@@ -1,6 +1,15 @@
 # QuoteApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+<p>This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.</p>
+
+<p>It is an Angular App that enables a user to create votes and have those voted on whether they are terrible or inspirational.</p>
+
+<p>It also highlights the quote with the highest number of votes and shows the amount of time that has passed since the quote was created.</p>
+
+## Author's Information
+
+This project was developed by Emmanuela Joy a software development student at Moringa School.
+Click on [Emmanuela Joy ](https://github.com/EmmanuelaJoy) to find the link to her Github Site.
 
 ## Development server
 
@@ -25,3 +34,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Technologies Used:
+
+- HTML.
+- CSS.
+- Bootstrap framework.
+- Angular.
+- Typescript.
+
+## Contact Information
+
+- Email : emmajoy81@gmail.com
+- Phone : +254 725853727
+
+## [License](https://github.com/EmmanuelaJoy/pizza-website/blob/main/LICENSE)
+
+MIT © [Emmanuela Joy ](https://github.com/EmmanuelaJoy)
