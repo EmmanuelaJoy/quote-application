@@ -1,3 +1,6 @@
 export class Quote {
-    constructor(public quoteInput: string, public author: string, public publisher: string) { }
+    favoriteQuote!: boolean;
+    constructor(public quoteInput: string, public author: string, public publisher: string, public postedDate: Date) {
+        this.favoriteQuote = false;
+    }
 }

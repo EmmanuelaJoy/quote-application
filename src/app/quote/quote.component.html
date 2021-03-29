@@ -18,7 +18,7 @@
 
     <div class="row card-group">
         <div class="col-sm-12 col-md-6 col-lg-6" *ngFor='let quote of quotes;let i = index'>
-            <div id={{i}} class="card bg-light mb-3" appHighlight>
+            <div id={{i}} class="card" appHighlight>
                 <div class="card-header">Author: {{quote.author}}</div>
                 <div class="card-body">
                     <p class="card-text">{{quote.quoteInput}}</p>
@@ -27,7 +27,8 @@
                     </p>
                 </div>
                 <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
+                    <small class="text-muted">Last updated {{quote.postedDate | dateCount}} ago on
+                        {{quote.postedDate | date}}</small>
                 </div>
             </div>
         </div>
