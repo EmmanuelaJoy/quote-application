@@ -1,25 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=PT+Serif:ital@1&family=Shippori+Mincho+B1:wght@600&display=swap");
 
 form {
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
   font-family: "Shippori Mincho B1", serif;
   font-size: 22px;
 }
 
 button {
   background-color: steelblue;
-}
-
-#submitBtn:hover {
-  background-color: rgb(44, 155, 22);
+  margin-right: 0.5em;
   border: none;
 }
 
-#resetBtn {
-  margin-left: 4em;
+#submitBtn:hover {
+  background-color: rgb(225, 171, 42);
+  color: black;
+  border: none;
 }
 
 #resetBtn:hover {
   background-color: rgb(255, 94, 0);
-  border: none;
+  color: black;
 }
