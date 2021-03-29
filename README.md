@@ -15,7 +15,7 @@ Click on [Emmanuela Joy ](https://github.com/EmmanuelaJoy) to find the link to h
 
 ## Demo
 
-Here is a working live demo : https://emmanuelajoy.github.io/pizza-website/
+Here is a working live demo : https://emmanuelajoy.github.io/quote-application/
 
 ## Development server
 
